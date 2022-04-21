@@ -130,3 +130,4 @@ dmypy.json
 
 # VSCode files
 .vscode/
+about_REST_API.code-workspace
