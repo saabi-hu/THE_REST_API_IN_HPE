@@ -14,3 +14,7 @@ A REST API HPE termékekben való használatának bemutatása
 - [hpestorapi](https://github.com/HewlettPackard/python-storage-clients)
 
 ## CuRL példák
+
+## ToDo
+- CuRL példák
+- BIOS beállíás változtatás/átírás
