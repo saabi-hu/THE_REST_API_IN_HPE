@@ -17,7 +17,7 @@ A REST API HPE termékekben való használatának bemutatása
 
 A BIOS verziójának lekérdezése:
 
-    > curl https://172.16.0.3/redfish/v1/UpdateService/FirmwareInventory/2/ --insecure -u hpadmin:HPinvent123 -L -s
+    curl https://172.16.0.3/redfish/v1/UpdateService/FirmwareInventory/2/ --insecure -u hpadmin:HPinvent123 -L -s
 
 És ennek formázatlan kimenete:
 
