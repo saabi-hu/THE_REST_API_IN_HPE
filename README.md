@@ -27,6 +27,13 @@ PowerShellben a Invoke-RestMethod használható REST API hívásokra. Az alábbi
     >> }
     PS C:\Users\saabi> Invoke-RestMethod @Params -SkipCertificateCheck | ConvertTo-Json
 
+Bár nem REST API, azért megjegyzem, hogy nem feltétlen kell a nevet és a jelszót interaktívan bekérni. Ha scriptbe tennénk, akkor ez az eljárás:
+
+    $myUser = "hpadmin"
+    $myPass = "HPinvent123"
+    $secPass = ConvertTo-SecureString $myPass -AsPlainText -Force
+    $Cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $myUser, $secPass
+
 ## REST API dokumentációk
 - [iLO RESTful API for HPE iLO 5 reference](https://hewlettpackard.github.io/ilo-rest-api-docs/ilo5/)
 - [Python iLO Redfish Library docs](https://hewlettpackard.github.io/python-ilorest-library/)
