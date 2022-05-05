@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+fwupgradecheck.py - Example program, how to check system ROM firmware version 
+"""
+
 import redfish
 import sys
 
