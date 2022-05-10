@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+fwvers.py - Example program, how to query firmware versions from a HPE ProLiant Gen10(Plus) server
+"""
+
 import sys
 import redfish
 
