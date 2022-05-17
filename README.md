@@ -1,6 +1,8 @@
 # about_REST_API
 
-- A *REST API* HPE termékekben való használatának bemutatása. Maga a REST szó egy rövidítés, jelentése: **representational state transfer**, az API pedig: **application programming interface**. A REST API egy olyan, elsősorban gép-gép kommunikációra kitalált architektúra, amely laza szabályzással teszi lehetővé, hogy programok a HTTP/HTTPS protokolt használva jussanak információhoz vagy befolyásolják más programok működését. Laza szabályzás alatt azt kell érteni, hogy a REST API-nak nincs kötött előírása az URL-ekkel kapcsolatban. 
+A *REST API* HPE termékekben való használatának bemutatása. 
+
+- A REST szó egy rövidítés, jelentése: **representational state transfer**, az API pedig: **application programming interface**. A REST API egy olyan, elsősorban gép-gép kommunikációra kitalált architektúra, amely laza szabályzással teszi lehetővé, hogy programok a HTTP/HTTPS protokolt használva jussanak információhoz vagy befolyásolják más programok működését. Laza szabályzás alatt azt kell érteni, hogy a REST API-nak nincs kötött előírása az URL-ekkel kapcsolatban. 
 
 - A [*Redfish*](https://www.dmtf.org/standards/redfish) egy standard, mely egyszerű és biztonságos managementre terveztek konvergált, hybrid IT és software definiált datacenterek részére. A *Redfish* standard meghatározza az adatlekéréshez használható URL-eket és a visszakapott adatok formáját.
 
