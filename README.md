@@ -40,6 +40,10 @@ Bár nem REST API, azért megjegyzem, hogy nem feltétlen kell a nevet és a jel
     $secPass = ConvertTo-SecureString $myPass -AsPlainText -Force
     $Cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $myUser, $secPass
 
+És persze megoldható az egész egyetlen sorból is:
+    
+    PS C:\Users\saabi> Invoke-RestMethod -Uri https://172.16.0.5/redfish/v1/systems/1/bios/settings -Authentication "Basic" -Credential (Get-Credential) -SkipCertificateCheck | ConvertTo-Json
+    
 ## Greenlake
 Lehetőség van a Greenlake elérésére REST API-n. Ehhez enhanced subscriptionre van szükség. Dokumentáció és self-support:
 - [HPE GreenLake Developer Portal](https://developer.greenlake.hpe.com/)
