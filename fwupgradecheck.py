@@ -11,7 +11,7 @@ import sys
 
 default_ilo_login = "hpadmin"
 default_ilo_password = "HPinvent123"
-iLO_IPs = ["172.16.0.3","172.16.0.4","172.16.0.5","172.16.0.6","172.16.0.7","172.16.0.8"]
+iLO_IPs = ["172.16.0.5","172.16.0.8"]
 
 # Collects BIOS versions from the specified servers and verifies that an update is required. 
 for IP in iLO_IPs:

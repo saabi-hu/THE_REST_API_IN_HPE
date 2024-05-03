@@ -1,6 +1,8 @@
 # about_REST_API
 
-- A *REST API* HPE termékekben való használatának bemutatása. Maga a REST szó egy rövidítés, jelentése: **representational state transfer**, az API pedig: **application programming interface**. A REST API egy olyan, elsősorban gép-gép kommunikációra kitalált architektúra, amely laza szabályzással teszi lehetővé, hogy programok a HTTP/HTTPS protokolt használva jussanak információhoz vagy befolyásolják más programok működését. Laza szabályzás alatt azt kell érteni, hogy a REST API-nak nincs kötött előírása az URL-ekkel kapcsolatban. 
+A *REST API* HPE termékekben való használatának bemutatása. 
+
+- A REST szó egy rövidítés, jelentése: **representational state transfer**, az API pedig: **application programming interface**. A REST API egy olyan, elsősorban gép-gép kommunikációra kitalált architektúra, amely laza szabályzással teszi lehetővé, hogy programok a HTTP/HTTPS protokolt használva jussanak információhoz vagy befolyásolják más programok működését. Laza szabályzás alatt azt kell érteni, hogy a REST API-nak nincs kötött előírása az URL-ekkel kapcsolatban. 
 
 - A [*Redfish*](https://www.dmtf.org/standards/redfish) egy standard, mely egyszerű és biztonságos managementre terveztek konvergált, hybrid IT és software definiált datacenterek részére. A *Redfish* standard meghatározza az adatlekéréshez használható URL-eket és a visszakapott adatok formáját.
 
@@ -37,6 +39,15 @@ Bár nem REST API, azért megjegyzem, hogy nem feltétlen kell a nevet és a jel
     $myPass = "HPinvent123"
     $secPass = ConvertTo-SecureString $myPass -AsPlainText -Force
     $Cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $myUser, $secPass
+
+És persze megoldható az egész egyetlen sorból is:
+    
+    PS C:\Users\saabi> Invoke-RestMethod -Uri https://172.16.0.5/redfish/v1/systems/1/bios/settings -Authentication "Basic" -Credential (Get-Credential) -SkipCertificateCheck | ConvertTo-Json
+    
+## Greenlake
+Lehetőség van a Greenlake elérésére REST API-n. Ehhez enhanced subscriptionre van szükség. Dokumentáció és self-support:
+- [HPE GreenLake Developer Portal](https://developer.greenlake.hpe.com/)
+- [HPE DEV Community](https://developer.hpe.com/community/)
 
 ## REST API dokumentációk
 - [iLO RESTful API for HPE iLO 5 reference](https://hewlettpackard.github.io/ilo-rest-api-docs/ilo5/)

@@ -9,7 +9,7 @@ import sys
 import redfish
 
 
-ILO_URL = "172.16.0.3"
+ILO_URL = "172.16.0.5"
 ILO_LOGIN = "hpadmin"
 ILO_PASSWORD = "HPinvent123"
 
